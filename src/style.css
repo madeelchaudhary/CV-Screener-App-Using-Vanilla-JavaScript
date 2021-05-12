@@ -1,0 +1,392 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url("./bg.jfif") no-repeat center/cover;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow-x: hidden;
+}
+
+/* Main Button Styling */
+.btn {
+  outline: none;
+  border: none;
+  font-family: "Roboto Slab", serif;
+  cursor: pointer;
+  font-size: 1.75rem;
+  font-weight: 700;
+  padding: 17px 48px;
+  position: relative;
+  letter-spacing: 0.09rem;
+}
+
+/* Neon Effect Btn Styling Start  */
+.btn-neon {
+  overflow: hidden;
+  border-radius: 8px;
+  -webkit-transition: color, 600ms ease-in-out, -webkit-transform, -webkit-box-shadow;
+  transition: color, 600ms ease-in-out, -webkit-transform, -webkit-box-shadow;
+  transition: transform, color, box-shadow, 600ms ease-in-out;
+  transition: transform, color, box-shadow, 600ms ease-in-out, -webkit-transform, -webkit-box-shadow;
+  background-color: #c7d3d4ff;
+  color: black;
+}
+
+.btn-neon span:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(whitesmoke), to(#169fb1));
+  background: linear-gradient(90deg, whitesmoke, #169fb1);
+}
+
+.btn-neon span:nth-child(2) {
+  position: absolute;
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(whitesmoke), to(#169fb1));
+  background: linear-gradient(to bottom, whitesmoke, #169fb1);
+}
+
+.btn-neon span:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, right top, left top, from(whitesmoke), to(#169fb1));
+  background: linear-gradient(to left, whitesmoke, #169fb1);
+}
+
+.btn-neon span:nth-child(4) {
+  position: absolute;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(whitesmoke), to(#169fb1));
+  background: linear-gradient(to top, whitesmoke, #169fb1);
+}
+
+.btn-neon:hover,
+.btn-neon:focus {
+  background: turquoise;
+  color: white;
+  -webkit-box-shadow: 0 0 20px turquoise, 0 0 50px turquoise, 0 0 100px turquoise, 0 0 200px turquoise;
+          box-shadow: 0 0 20px turquoise, 0 0 50px turquoise, 0 0 100px turquoise, 0 0 200px turquoise;
+}
+
+.btn-neon:hover span:nth-child(1),
+.btn-neon:focus span:nth-child(1) {
+  -webkit-animation: btnAnimate_1 1s ease-in-out infinite;
+          animation: btnAnimate_1 1s ease-in-out infinite;
+}
+
+@-webkit-keyframes btnAnimate_1 {
+  0% {
+    left: 0;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes btnAnimate_1 {
+  0% {
+    left: 0;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.btn-neon:hover span:nth-child(2),
+.btn-neon:focus span:nth-child(2) {
+  -webkit-animation: btnAnimate_2 1s ease-in-out 0.25s infinite;
+          animation: btnAnimate_2 1s ease-in-out 0.25s infinite;
+}
+
+@-webkit-keyframes btnAnimate_2 {
+  0% {
+    top: 0;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes btnAnimate_2 {
+  0% {
+    top: 0;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.btn-neon:hover span:nth-child(3),
+.btn-neon:focus span:nth-child(3) {
+  -webkit-animation: btnAnimate_3 1s ease-in-out 0.5s infinite;
+          animation: btnAnimate_3 1s ease-in-out 0.5s infinite;
+}
+
+@-webkit-keyframes btnAnimate_3 {
+  0% {
+    right: 0;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes btnAnimate_3 {
+  0% {
+    right: 0;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.btn-neon:hover span:nth-child(4),
+.btn-neon:focus span:nth-child(4) {
+  -webkit-animation: btnAnimate_4 1s ease-in-out 0.75s infinite;
+          animation: btnAnimate_4 1s ease-in-out 0.75s infinite;
+}
+
+@-webkit-keyframes btnAnimate_4 {
+  0% {
+    bottom: 0;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+@keyframes btnAnimate_4 {
+  0% {
+    bottom: 0;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+section.cvContainer {
+  width: 60%;
+  height: 65%;
+  background: #0a3d62;
+  background-blend-mode: screen;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+  border-radius: 0.6rem;
+}
+
+section.cvContainer:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 0 0 1rem 2px #f8c291;
+          box-shadow: 0 0 1rem 2px #f8c291;
+}
+
+.user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+.user .userPic {
+  width: 13rem;
+  height: 13rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1.3rem;
+}
+
+.user .userPic img {
+  width: 13rem;
+  height: 13rem;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.user .infoIcons {
+  font-size: 3.8rem;
+  font-weight: 900;
+  color: #3c6382;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 70%;
+  margin-bottom: 2rem;
+}
+
+.user .infoIcons .fad {
+  font-size: 3.5rem;
+}
+
+.user .infoIcons .fa-envelope {
+  font-size: 4rem;
+}
+
+.user .infoIcons i {
+  border-radius: 100%;
+  background: none;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.user .infoIcons i:hover {
+  -webkit-box-shadow: 0 0 1rem 0.5rem #38ada9;
+          box-shadow: 0 0 1rem 0.5rem #38ada9;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: white;
+}
+
+.user .userInfo {
+  margin-bottom: 2rem;
+  color: #82ccdd;
+  font-family: "Itim", cursive;
+  font-weight: 500;
+  font-size: 2rem;
+  max-width: 350px;
+  text-align: center;
+}
+
+.user .userInfo p {
+  display: none;
+}
+
+.user .userInfo h4 {
+  display: none;
+  margin-bottom: 1rem;
+  color: white;
+  font-size: 2.5rem;
+}
+
+@media screen and (max-width: 570px) {
+  section.cvContainer {
+    width: 90%;
+    height: 85%;
+  }
+  i {
+    margin-left: 0.5rem;
+  }
+}
+
+.newUser {
+  position: relative;
+  --scale: 0;
+  --arrow-size: 11px;
+}
+
+.newUser::before, .newUser::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(var(--translate-Y, 0)) scale(var(--scale));
+          transform: translateX(-50%) translateY(var(--translate-Y, 0)) scale(var(--scale));
+  -webkit-transition: 200ms -webkit-transform;
+  transition: 200ms -webkit-transform;
+  transition: 200ms transform;
+  transition: 200ms transform, 200ms -webkit-transform;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+}
+
+.newUser::before {
+  --translate-Y: calc(-100% - 10px);
+  color: white;
+  content: "Click these icons to see information ";
+  padding: 0.5rem;
+  font-family: "Roboto Slab", serif;
+  max-width: 100%;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  background-color: #535c68;
+  border-radius: 0.3rem;
+  text-align: center;
+}
+
+.newUser:hover::after, .newUser:hover::before, .newUser:focus::before, .newUser:focus::after, .newUser:focus-within::before, .newUser:focus-within::after {
+  --scale: 1;
+}
+
+.newUser::after {
+  --translate-Y: calc(-1 * var(--arrow-size));
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  content: " ";
+  border: var(--arrow-size) solid transparent;
+  border-top-color: #535c68;
+}
+/*# sourceMappingURL=style.css.map */
